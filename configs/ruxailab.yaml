@@ -1,1 +1,38 @@
+study_type: eye_tracking_benchmark
 
+screen:
+  width_px: 1920
+  height_px: 1080
+  diagonal_inches: 24.0
+  viewing_distance_cm: 65.0
+
+tasks:
+  - type: grid
+    n_targets: 9
+    dwell_time_s: 1.5
+    inter_target_gap_s: 0.5
+  - type: fixation
+    duration_s: 30
+
+device:
+  type: webcam
+  sampling_rate_hz: 30
+  camera_index: 0
+
+quality:
+  required_label: GOOD
+  max_data_loss_pct: 15.0
+  max_mean_error_px: 100.0
+  auto_recalibrate: true
+  max_recalibration_attempts: 2
+
+export:
+  output_dir: data/exports/
+  formats: [json, csv, html]
+  save_figures: true
+
+ruxailab:
+  enabled: true
+  endpoint: http://localhost:5000
+  study_id: null
+  api_key: null
