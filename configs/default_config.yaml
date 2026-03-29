@@ -1,1 +1,40 @@
+screen:
+  width_px: 1920
+  height_px: 1080
+  diagonal_inches: 24.0
+  viewing_distance_cm: 65.0
 
+task:
+  grid_size: 9
+  dwell_time_s: 1.5
+  inter_target_gap_s: 0.5
+  fixation_duration_s: 30
+  pursuit_pattern: circle
+  pursuit_speed_px: 100
+  saccade_amplitude_px: 500
+  saccade_frequency_hz: 0.5
+
+device:
+  type: webcam
+  sampling_rate_hz: 30
+  csv_path: null
+  camera_index: 0
+
+metrics:
+  angular_error: true
+  bcea_probability: 0.68
+
+export:
+  output_dir: data/exports/
+  formats:
+    - json
+    - csv
+    - html
+  save_figures: true
+  figure_dpi: 150
+
+ruxailab:
+  enabled: false
+  endpoint: http://localhost:5000/api/benchmark
+  study_id: null
+  api_key: null
