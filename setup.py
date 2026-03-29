@@ -1,11 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="eye-tracking-benchmark",
+    name="Eye Tracking System",
     version="1.0.0",
     description="Standardized benchmarking tool for eye-tracking accuracy and precision validation",
-    author="Your Name",
-    license="MIT",
+    author="Shukti Khanorkar",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     python_requires=">=3.9",
